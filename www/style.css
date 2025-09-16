@@ -1,3 +1,9 @@
+html{
+  font-family: Cambria;
+}
+
+
+
 header{
     background-color: black;
     padding: 10px;
@@ -12,6 +18,26 @@ header{
   flex-wrap: wrap;
 
 
+}
+
+a {
+  color:azure
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline !important;
 }
 
 img {
