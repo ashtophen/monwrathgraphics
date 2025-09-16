@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="preload" href="headermanager.js" as="script" />
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header-global></header-global>
+
+<div class="flex-container">
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+<div class="flex-item"><img src="photos/louie.png"></div>
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+
+</div>
+<script>
+     const flexItems = document.querySelectorAll('.flex-item');
+    let delay = 0;
+
+    flexItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('animate');
+      }, delay);
+      delay += 100; // Increase delay for the next item (e.g., 200ms)
+    });
+</script>
+<script src="./scripts/headermanager.js"></script>
+</body>
+</html>
