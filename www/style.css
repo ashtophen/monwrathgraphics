@@ -6,6 +6,7 @@ html{
 
 header{
     background-color: black;
+    background: linear-gradient(to bottom, black, rgb(66, 66, 73));
     padding: 10px;
 }
 
@@ -71,7 +72,7 @@ img {
 body{
     /*background-image: url(photos/soapbubble.webp); */
     margin: 0%;
-    background-color: rgb(66, 66, 73);
+    background-color: black;
 
 }
 p {
