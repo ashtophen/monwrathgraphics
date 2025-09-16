@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="teststyles.css">
+</head>
+
+<body>
+<header>
+  <style>a {font-size: larger;}</style>
+  <div class="headerelements">
+    <p style="text-align: center;">Monwrath Gallery</p>
+    <div style="text-align: center;" class="topnav">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a> 
+    </div>
+  </div>
+  <div class="cloud"></div>
+</header>
+
+
+<div class="flex-container">
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+<div class="flex-item"><img src="photos/louie.png"></div>
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+<div class="flex-item"><img src="photos/oops.jpg"></div>
+
+</div>
+<script>
+     const flexItems = document.querySelectorAll('.flex-item');
+    let delay = 0;
+
+    flexItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('animate');
+      }, delay);
+      delay += 100; // Increase delay for the next item (e.g., 200ms)
+    });
+</script>
+
+</body>
+</html>

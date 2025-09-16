@@ -1,0 +1,140 @@
+html{
+  font-family: Cambria;
+}
+
+@keyframes animateMove {
+  0% {
+    transform: translateX(0); /* Starting position */
+  }
+  100% {
+    transform: translateX(calc(100vw + 190%)); /* Move across the screen */
+  }
+}
+
+header{
+    background-color: black;
+    background: linear-gradient(to top, black, rgb(66, 66, 73));
+    padding: 10px;
+    z-index: -2 !important;
+}
+
+.headerelements{
+  z-index: -2 !important;
+}
+
+.cloud{ 
+  z-index: 1 !important;
+   margin-top:0px;
+   width:350px;
+   height:120px;
+   background:#707070;
+   box-shadow: 10px 10px rgba(0,0,0,0.2);
+   border-radius:100px;
+   position: absolute;
+   left: -500px;
+   animation-name: animateMove;
+   animation-duration: 21s;
+   animation-timing-function: linear;
+   animation-iteration-count: infinite;
+}
+.cloud::after, .cloud::before{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+.cloud::after{
+    width:100px;
+    height:120px;
+    top:-100px;
+    left:-120px;
+}
+.cloud::before{
+    width:180px;
+    height:180px;
+    top: -70px;
+    left:130px;
+}
+
+.flex-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+
+}
+
+a {
+  color:azure;
+  z-index: 4 !important;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  text-decoration: underline !important;
+}
+
+img {
+ max-width: 400px;
+}
+
+
+.flex-item {
+    margin: 10px;
+     opacity: 0; /* Start hidden */
+      transform: translateY(40px); /* Start slightly below */
+      transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Define transition properties */
+}
+
+.flex-item.animate {
+       opacity: 1; /* End visible */
+      transform: translateY(0); /* End in original position */
+    }
+
+body{
+    /*background-image: url(photos/soapbubble.webp); */
+    margin: 0%;
+    background-color: black;
+
+}
+p {
+    color: azure;
+    font-size: xx-large;
+    font-family: Cambria;
+    z-index: 4 !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
