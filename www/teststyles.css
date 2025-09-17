@@ -19,7 +19,8 @@ header{
 }
 
 .headerelements{
-  z-index: -2 !important;
+  position: relative;
+  z-index: 2 !important;
 }
 
 .cloud{ 
@@ -106,10 +107,25 @@ img {
       transform: translateY(0); /* End in original position */
     }
 
+    .sky {
+      position: absolute;
+      background-image: url('photos/nightsky.jpg'); /* Replace with your image path */
+      background-position: center; /* Center the image */
+      background-repeat: repeat-x; /* Prevent image repetition */
+      background-size: cover; /* Scale the image to cover the entire container */
+      width: 100vw; /* Set width to 100% of viewport width */
+      height: 100vh; /* Set height to 100% of viewport height */
+      animation-name: animateMove;
+      animation-duration: 21s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+  }
+
 body{
     /*background-image: url(photos/soapbubble.webp); */
     margin: 0%;
-    background-color: black;
+    height: 100%;
+    background-image: url('./photos/nightsky.jpg');
 
 }
 p {
