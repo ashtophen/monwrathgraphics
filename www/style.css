@@ -1,13 +1,17 @@
-html{
-  font-family: Cambria;
+html, body{
+  font-family: sans-serif;
 }
 
 
 
 header{
-    background-color: black;
-    background: linear-gradient(to bottom, black, rgb(66, 66, 73));
+  background-image: url("photos/banner.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+    /*background-color: black;
+    background: linear-gradient(to bottom, black, rgb(66, 66, 73));*/
     padding: 10px;
+    
 }
 
 .flex-container {
@@ -41,9 +45,7 @@ a:hover {
   text-decoration: underline !important;
 }
 
-img {
- max-width: 400px;
-}
+
 
 @keyframes fadeInUp {
   from {
@@ -68,6 +70,12 @@ img {
        opacity: 1; /* End visible */
       transform: translateY(0); /* End in original position */
     }
+
+.thumb:hover{
+  /*height: 620px !important;*/
+  box-shadow: 0 0 10px 10px rgba(255, 249, 170, 0.459);
+}
+
 
 body{
     /*background-image: url(photos/soapbubble.webp); */
@@ -99,4 +107,134 @@ p {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+
+/* The Image */
+img {
+
+  aspect-ratio: auto;
+    cursor: pointer;
+}
+
+
+/* Description of Image */
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0.1)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive Columns */
+@media only screen and (max-width: 700px){
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+  .modal-content {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .responsive {
+    width: 100%;
+  }
+}
+
+/* Clear Floats */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50px 1fr 50px; /* Left bar, main content, right bar */
+  min-height: 100vh;
+}
+
+.left-bar {
+  background-color: rgb(150, 150, 150);
+}
+
+.right-bar {
+  background-color: rgb(150, 150, 150);
+}
+
+.main-content {
+  background-color: #000000;
 }

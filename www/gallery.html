@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="grid-container">
+  <div class="left-bar"></div>
+  <div class="main-content">
+
+<header>
+  <style>a {font-size: larger;}</style>
+    <p style="text-align: center;">Monwrath Gallery</p>
+    <div style="text-align: center;" class="topnav">
+  <a href="index.html">Home</a>
+  <a class="active" href="gallery.html">Gallery</a>
+  <a href="about.html">About</a>
+
+</div>
+</header>
+
+
+
+<div class="flex-container">
+<div class="flex-item" class="responsive"><img class="thumb" src="photos/tumblr_08c5d793b521537959fe2978673dc68f_c92d7422_2048.jpg" height="600px"></div>
+<div class="flex-item" class="responsive"><img class="thumb" src="photos/tumblr_68bc336e853b95bcbef0c9ed357e7dad_ab929ef3_2048.jpg" height="600px"></div>
+<div class="flex-item" class="responsive"><img class="thumb" src="photos/tumblr_6df7cf699585a22bef38bacb798f3468_9d824fd9_2048.jpg" height="600px"></div>
+<div class="flex-item" class="responsive"><img class="thumb" src="photos/tumblr_9364653c89c5c2dc59d640616ac2cbfb_cec7f5d5_2048.jpg" height="600px"></div>
+<div class="flex-item" class="responsive"><img class="thumb" src="photos/tumblr_da30741eb68b46191203010c7cb2beaa_a2aae042_2048.jpg" height="600px"></div>
+
+</div>
+</div>
+  <div class="right-bar"></div>
+<div class="clearfix"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+     const flexItems = document.querySelectorAll('.flex-item');
+    let delay = 0;
+
+    flexItems.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('animate');
+      }, delay);
+      delay += 100; // Increase delay for the next item (e.g., 200ms)
+    });
+</script>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+  images[i].onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    modalImg.alt = this.alt;
+    captionText.innerHTML = this.nextElementSibling.innerHTML;
+  }
+}
+</script>
+
+</body>
+</html>
