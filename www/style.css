@@ -71,6 +71,12 @@ a:hover {
       transform: translateY(0); /* End in original position */
     }
 
+.thumb{
+  max-width: 80vw;
+  height: auto;
+  max-height: 600px;
+}
+
 .thumb:hover{
   /*height: 620px !important;*/
   box-shadow: 0 0 10px 10px rgba(255, 249, 170, 0.459);
@@ -222,19 +228,62 @@ div.desc {
 
 
 .grid-container {
+  overflow-x: hidden;
   display: grid;
-  grid-template-columns: 50px 1fr 50px; /* Left bar, main content, right bar */
-  min-height: 100vh;
+  grid-template-columns: 5% 90% 5%; /* Left bar, main content, right bar */
+  max-height: 100vh;
+  max-width: 100vw;
+}
+
+.top-bar {
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  height: 5vh;
 }
 
 .left-bar {
+  grid-row: 2;
   background-color: rgb(150, 150, 150);
 }
 
 .right-bar {
+  grid-row: 2;
   background-color: rgb(150, 150, 150);
 }
 
 .main-content {
+  grid-row: 2;
+  height: fit-content;
   background-color: #000000;
+}
+
+.bottom-bar {
+  grid-column: 1 / span 3;
+  grid-row: 3;
+  height: 5vh;
+}
+
+.bar {
+  background-color: #555;
+}
+
+.content-grid {
+  overflow-x: hidden;
+  display: grid;
+}
+
+.new-projects {
+
+}
+
+.lil-guy {
+
+}
+
+.nav {
+
+}
+
+.extras {
+  
 }
